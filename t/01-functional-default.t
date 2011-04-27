@@ -7,6 +7,9 @@ BEGIN { $ENV{MOJO_NO_IPV6} = $ENV{MOJO_POLL} = 1 }
 
 use Test::More;
 
+plan skip_all => 'set TEST_LIVE to enable this test'
+  unless $ENV{TEST_LIVE};
+
 plan tests => 6;
 
 # testing code starts here
